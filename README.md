@@ -7,6 +7,12 @@
 ## Build Setup
 
 ``` bash
+# clone project
+git clone https://github.com/vcmiranda/HockeyTournament_VueJS.git
+
+# access project folder
+cd HockeyTournament_VueJS
+
 # install dependencies
 npm install
 
