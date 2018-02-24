@@ -1,6 +1,7 @@
 # HockeyTournament_VueJS
 
 > Same project as HockeyTournament_VanillaJS, only made using VueJS.
+
 > Social media links and contact form submit not available.
 
 ## Build Setup
