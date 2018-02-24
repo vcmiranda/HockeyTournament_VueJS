@@ -3,17 +3,39 @@
     <h4>Contact</h4>
     <div class="form">
       <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="First name" class="input">
+      <input type="text" id="fname" v-model="form.firstname" placeholder="First name" class="input">
       <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Last name" class="input">
+      <input type="text" id="lname" v-model="form.lastname" placeholder="Last name" class="input">
       <label for="topic">Topic</label>
-      <input type="text" id="topic" name="topic" placeholder="Topic" class="input">
+      <input type="text" id="topic" v-model="form.topic" placeholder="Topic" class="input">
       <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Leave yor message" style="height:200px" class="input"></textarea>
-      <input type="submit" value="Submit" class="submit-btn">
+      <textarea id="message" v-model="form.message" placeholder="Leave yor message" style="height:200px" class="input"></textarea>
+      <input type="submit" @click="submit" value="Submit" class="submit-btn">
+      <input type="submit" @click="clear" value="Clear" class="submit-btn">
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data () {
+    return {
+      form: {
+        firstname: '',
+        lastname: '',
+        topic: '',
+        message: '',
+      }
+    }
+  },
+  methods: {
+    submit() {},
+    clear () {
+      this.form = {};
+    },
+  }
+}
+</script>
 
 <style scoped>
 .contact {
